@@ -1,5 +1,6 @@
 extern "C" {
    int nunum();
+   int nunumrs();
 }
 
 void setup() {
@@ -10,7 +11,11 @@ void setup() {
 
 void loop() {
   Serial.print("Hello, world!\n");
+  Serial.print("from c++: ");
   Serial.print(nunum());
+  Serial.print("\nfrom rust: ");
+  Serial.print(nunumrs());
+  Serial.print("\n");
   digitalWrite(LED_BUILTIN, HIGH);
   delay(200);
   digitalWrite(LED_BUILTIN, LOW);
