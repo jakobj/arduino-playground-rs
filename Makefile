@@ -7,5 +7,5 @@ all: $(PATH_TO_LIBRARY_OBJECT)
 	arduino-cli compile -v --build-properties compiler.ldflags=$(PATH_TO_LIBRARY_OBJECT) --fqbn $(ARDUINO_BOARD_FQBN) MyFirstSketch
 	arduino-cli upload --protocol serial --port $(ARDUINO_BOARD_PORT) --fqbn $(ARDUINO_BOARD_FQBN) MyFirstSketch/
 
-$(PATH_TO_LIBRARY_OBJECT):
+$(PATH_TO_LIBRARY_OBJECT): my_rust_library/Cargo.toml my_rust_library/src/lib.rs
 	cd my_rust_library && cargo rustc --release -- --emit=obj --target $(RUST_TARGET_PLATFORM)
