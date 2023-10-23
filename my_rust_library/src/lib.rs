@@ -1,5 +1,4 @@
 #![no_std]
-// #![no_main]
 
 #[panic_handler]
 fn panic(_info: &core::panic::PanicInfo) -> ! {
@@ -7,6 +6,6 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 }
 
 #[no_mangle]
-pub extern "C" fn nunumrs() -> i32 {
+pub extern "C" fn my_example_rust_function() -> i32 {
     27
 }

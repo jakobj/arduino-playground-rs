@@ -1,5 +1,5 @@
 [package]
-name = "rs_example"
+name = "my_rust_library"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,9 +8,6 @@ edition = "2021"
 [dependencies]
 
 [lib]
-name = "rs_example"
+name = "my_rust_library"
 crate-type = ["staticlib"]
 
-[build]
-target = "thumbv7em-none-eabi"   # Cortex-M4 and Cortex-M7 (no FPU)
-# target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
