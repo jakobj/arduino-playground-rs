@@ -6,6 +6,6 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 }
 
 #[no_mangle]
-pub extern "C" fn my_example_rust_function() -> i32 {
-    27
+pub extern "C" fn my_example_function(value: i32) -> i32 {
+    value * value
 }
